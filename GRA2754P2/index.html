@@ -17,19 +17,96 @@ wrapper{
     background-color: #19B5E3;
 	}
 header{
-	height:150px;
+	height: auto;
+	min-height: 220px;
+	width: 100%;
 	background-color:#19B5E3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 20px 0;
 	}
+body wrapper header {
+}
+
+.neon-title {
+	font-family: 'Arial Black', Gadget, sans-serif;
+	font-size: 48px; 
+	font-weight: bold;
+	color: #FFFF00;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	text-shadow: 
+		0 0 5px #ffcc00, 
+		0 0 10px #ffcc00, 
+		0 0 20px #ffff00, 
+		0 0 40px #ffed4a, 
+		0 0 80px #ffed4a;
+	animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+	0% {
+		text-shadow: 
+			0 0 5px #ffcc00, 
+			0 0 10px #ffcc00, 
+			0 0 20px #ffff00, 
+			0 0 40px #ffed4a;
+	}
+	100% {
+		text-shadow: 
+			0 0 2px #ffcc00, 
+			0 0 5px #ffcc00, 
+			0 0 10px #ffff00, 
+			0 0 20px #ffed4a, 
+			0 0 30px #ffed4a;
+	}
+}
+
 main{
     background-color: #000000;
     box-sizing: border-box;
     text-align: center;
     height: auto;
 	}
+
+/* Estilo para el footer con neón morado compacto */
 footer{
-    height: 80px;
+    background-color: #19B5E3;
+    padding: 15px 20px;
+    text-align: center;
     clear: both;
-	}
+}
+
+.neon-footer {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #f3c6ff;
+    line-height: 1.4;
+    text-shadow: 
+        0 0 2px #d475ff, 
+        0 0 5px #b026ff, 
+        0 0 10px #9400d3;
+    animation: neon-purple-glow 2s infinite alternate;
+}
+
+@keyframes neon-purple-glow {
+    0% {
+        text-shadow: 
+            0 0 2px #d475ff, 
+            0 0 5px #b026ff;
+    }
+    100% {
+        text-shadow: 
+            0 0 4px #f3c6ff, 
+            0 0 10px #b026ff, 
+            0 0 15px #9400d3;
+    }
+}
 	
 	#caramelonegroup, 
 	#carameltwogroup, 
@@ -94,8 +171,6 @@ footer{
 			transform: scaleY(1.12);
 		}
 	}
-
-
 	
 	#waveonegroup {
 		animation: wave-stretch 2.5s infinite linear alternate;
@@ -126,12 +201,6 @@ footer{
 		}
 	}
 
-	#racoongroup {
-		
-	}
-	
-#racoon #Background {
-}
 svg {
     width: 100%;
     height: auto;
@@ -142,11 +211,13 @@ svg {
 <body>
     <wrapper>
         <header>
+          <h1 class="neon-title">Sticky Paws&nbsp;</h1>
+          <h1 class="neon-title">"Asalto en Altamar"</h1>
         </header>
         				
         <main>
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1308.07" height="1056.26" viewBox="0 0 1308.07 1056.26">
+  <?xml version="1.0" encoding="UTF-8"?>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1308.07" height="1056.26" viewBox="0 0 1308.07 1056.26">
   <defs>
     <style>
       .cls-1 {
@@ -989,9 +1060,11 @@ svg {
     </g>
   </g>
 </svg>
-        </main>
+      </main>
         
         <footer>
+            <p class="neon-footer">&copy; 2026, Lucia Gagliuffi</p>
+            <p class="neon-footer">This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
         </footer>
     </wrapper>
 </body>
