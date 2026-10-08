@@ -12,6 +12,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: #1a4f8b;
+    cursor: crosshair;
 }
 
 wrapper {
@@ -20,7 +21,6 @@ wrapper {
     display: block;
 }
 
-/* Header normal */
 header {
     background-color: #1a4f8b;
     padding: 20px 0 10px 0;
@@ -35,9 +35,13 @@ header {
     max-height: 140px; 
     width: auto;
     display: inline-block;
+    filter: drop-shadow(6px 6px 0px #0a2540);
+    transition: transform 0.3s ease;
 }
 
-/* 1. SELECTOR EXCLUSIVO PARA EL TÍTULO PRINCIPAL (Bold / Grueso) */
+.logo-container img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
 .section-title {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 35px;
@@ -94,6 +98,15 @@ div.character-card {
     box-shadow: 0 4px 8px rgba(0,0,0,0.00);
     text-align: center;
     -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.00);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+div.character-card:hover {
+    transform: translate(-4px, -4px) scale(1.02) rotate(-1deg);
+    box-shadow: 8px 8px 0px #0a2540;
+    background-color: #ffffcc;
 }
 
 
@@ -118,6 +131,11 @@ div.character-card img {
     object-fit: contain;
     background-color: #ffffff;
     margin-bottom: -4px;
+    transition: filter 0.3s;
+}
+
+div.character-card:hover img {
+    filter: saturate(150%) contrast(110%);
 }
 
 @media (min-width:32em){
